@@ -4,8 +4,8 @@
   tasks:
   - name: Copy webpage to host
     copy:
-      src: ~/ansible/inxed.html
-      dest: /www/html/
+      src: index.html
+      dest: /var/www/html/
       owner: apache
       group: apache
       mode: '0644'

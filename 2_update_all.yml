@@ -1,6 +1,6 @@
 ---
 - name: update all packages
-  hosts:
+  hosts: all
   tasks:
   - name: update all packages
     yum:

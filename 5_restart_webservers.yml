@@ -4,7 +4,7 @@
   tasks:
   - name: open service on firewall
     firewalld:
-      service: httpd
+      service: http
       permanent: yes
       state: enabled
       immediate: yes
