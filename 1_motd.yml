@@ -6,4 +6,4 @@
   - name: Set MOTD
     lineinfile:
       path: /etc/motd
-      line: Welcome to the {{ motd }} 
+      line: Welcome to the webservers 
