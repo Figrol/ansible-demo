@@ -1,6 +1,7 @@
 ---
 - name: add firewall exceptions and restart services
   hosts: all
+  become: yes
   tasks:
   - name: open service on firewall
     firewalld:

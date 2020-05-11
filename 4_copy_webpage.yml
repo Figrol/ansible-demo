@@ -1,6 +1,7 @@
 ---
 - name: Insert webpage
   hosts: all
+  become: yes
   tasks:
   - name: Copy webpage to host
     copy:

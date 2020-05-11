@@ -1,8 +1,7 @@
 ---
 - name: Change server Message of the day
   hosts: all
-  vars:
-    motd: 
+  become: yes
   tasks:
   - name: Set MOTD
     lineinfile:
