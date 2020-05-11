@@ -1,0 +1,11 @@
+---
+- name: Insert webpage
+  hosts: all
+  tasks:
+  - name: Copy webpage to host
+    copy:
+      src: ~/ansible/inxed.html
+      dest: /www/html/
+      owner: apache
+      group: apache
+      mode: '0644'

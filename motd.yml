@@ -1,0 +1,10 @@
+---
+- name: Change server Message of the day
+  hosts: all
+  vars:
+    motd: 
+  tasks:
+  - name: Set MOTD
+    lineinfile:
+      path: /etc/motd
+      line: Welcome to the {{ motd }} 

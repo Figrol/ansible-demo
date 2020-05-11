@@ -1,0 +1,15 @@
+---
+- name: add firewall exceptions and restart services
+  hosts: all
+  tasks:
+  - name: open service on firewall
+    firewalld:
+      service: httpd
+      permanent: yes
+      state: enabled
+      immediate: yes
+
+  - name: Restart webservice
+    service:
+      name: httpd
+      state: restarted
