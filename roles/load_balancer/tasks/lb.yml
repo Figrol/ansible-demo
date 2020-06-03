@@ -1,0 +1,7 @@
+---
+- copy:
+    src: files/lb.conf
+    dest: /etc/httpd/conf.d/lb.conf
+    owner: apache
+    group: apache
+    mode: '0644'

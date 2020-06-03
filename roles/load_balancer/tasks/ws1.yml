@@ -1,0 +1,7 @@
+---
+- copy:
+    src: files/index1.html
+    dest: /var/www/html/index.html
+    owner: apache
+    group: apache
+    mode: '0640'

@@ -1,5 +1,7 @@
-[all]
-
+[all:vars]
+ansible_user=jfigov
+ansible_ssh_pass=8-Jung138us
+ansible_port=22
 [webserver]
 192.168.1.120
 192.168.1.227

@@ -1,0 +1,6 @@
+---
+- name: Refresh Subscription manager
+  hosts: all
+  tasks:
+    - name: refresh subscription manager
+      command: sudo subscription-manager refresh

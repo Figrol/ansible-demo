@@ -1,0 +1,7 @@
+---
+- copy:
+    src: files/billy.jpg
+    dest: /var/www/html/billy.jpg
+    owner: apache
+    group: apache
+    mode: '0640'

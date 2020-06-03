@@ -1,0 +1,26 @@
+---
+# tasks file for load-balancer
+- name: copy load balancer config
+  import_tasks: lb.yml
+  when: "ansible_default_ipv4.address == '192.168.1.120'"
+
+- name: copy web server 1 files
+  import_tasks: ws1.yml
+  when: "ansible_default_ipv4.address == '192.168.1.227'"
+
+- name: copy web server 2 files
+  import_tasks: ws2.yml
+  when: "ansible_default_ipv4.address == '192.168.1.66'"
+
+- name: copy dog
+  import_tasks: copy_dog.yml
+  when: "ansible_default_ipv4.address != '192.168.1.120'"
+
+- name: add ipaddress into files
+  import_tasks: import_ip.yml
+  when: "ansible_default_ipv4.address != '192.168.1.120'"
+
+- name: reboot webservices
+  service:
+    name: httpd
+    state: restarted

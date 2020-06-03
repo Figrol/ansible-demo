@@ -1,0 +1,5 @@
+---
+- lineinfile:
+    dest: /var/www/html/index.html
+    insertafter: "<head>"
+    line: Ip address = "{{ansible_facts['default_ipv4']['address']}}"
